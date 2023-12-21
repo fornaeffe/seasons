@@ -1,3 +1,2 @@
-# Playground per testare la compatibilità tra three.js e i dispositivi VR
-
-Per usare la VR il server deve usare https
+# Esercizio sul moto di rivoluzione terrestre e sulle stagioni
+Dedicato alla 1C 23/24 del Bocchialini

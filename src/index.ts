@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 
-const width = window.innerWidth;
-const height = window.innerHeight;
+const width = Math.min(window.innerWidth, window.innerHeight);
+const height = Math.min(window.innerWidth, window.innerHeight);
 const aspect_ratio = width / height;
 
 // Create the scene
@@ -91,11 +91,11 @@ scene.add(earthGroup)
 
 // Create the renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( width, height );
 renderer.shadowMap.enabled = true;
 
 // Append the renderer to the page
-document.body.appendChild( renderer.domElement );
+document.getElementById("viewer").appendChild( renderer.domElement );
 
 // Orbit Controls
 const controls = new OrbitControls( camera, renderer.domElement )
@@ -163,8 +163,8 @@ renderer.setAnimationLoop(render)
 
 // Resizer
 function resize() {				
-  const width = window.innerWidth * 0.99;
-  const height = window.innerHeight * 0.99;
+  const width = Math.min(window.innerWidth, window.innerHeight);
+  const height = Math.min(window.innerWidth, window.innerHeight);
   const aspect_ratio = width / height;
   renderer.setSize( width, height );
   camera.left = camera.bottom * aspect_ratio;

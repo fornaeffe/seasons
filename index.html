@@ -5,9 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>Buon Natale 1C!</title>
 		<style>
-			body { margin: 0; background-color:black ; color: white; font-family: Roboto, Arial, sans-serif; }
+			body { margin: 0; background-color:black ; color: white; font-family: Roboto, Arial, sans-serif; display: flex; flex-direction: row;}
+			#viewer {height: 100vh; width: 100vh;}
+
 			.input-box { 
-				position: absolute;
 				display: grid;
 				grid-template-columns: auto;
 				grid-template-rows: auto;
@@ -17,6 +18,11 @@
 
 			.input-box>p { margin: 0; padding: 8px;}
 			.input-box>button { margin: 0; width: 48px; height: 48px;}
+
+			@media (orientation: portrait) {
+				body { flex-direction: column;}
+				#viewer {height: 100vw; width: 100vw;}
+			}
 		</style>
 	</head>
 	<body>
@@ -37,6 +43,7 @@
 			<p style="grid-column: 2; grid-row: 4;">Longitudine</p>
 			<button type="button" id="lonFwd" style="grid-column: 3; grid-row: 4;">&gt;</button>
 		</div>
+		<div id="viewer"></div>
 		
 		<script src="script/bundle.js"></script>
 	</body>

@@ -98,7 +98,8 @@ renderer.shadowMap.enabled = true;
 document.body.appendChild( renderer.domElement );
 
 // Orbit Controls
-const controls = new OrbitControls( camera, renderer.domElement );
+const controls = new OrbitControls( camera, renderer.domElement )
+controls.enablePan = false
 
 
 const revBack = document.getElementById("revBack")
@@ -131,6 +132,23 @@ lonBack.addEventListener("mousedown", (e) => {lonMove = -1})
 lonBack.addEventListener("mouseup", (e) => {lonMove = 0})
 lonFwd.addEventListener("mousedown", (e) => {lonMove = 1})
 lonFwd.addEventListener("mouseup", (e) => {lonMove = 0})
+
+revBack.addEventListener("touchstart", (e) => {revMove = -1})
+revBack.addEventListener("touchend", (e) => {revMove = 0})
+revFwd.addEventListener("touchstart", (e) => {revMove = 1})
+revFwd.addEventListener("touchend", (e) => {revMove = 0})
+rotBack.addEventListener("touchstart", (e) => {rotMove = -1})
+rotBack.addEventListener("touchend", (e) => {rotMove = 0})
+rotFwd.addEventListener("touchstart", (e) => {rotMove = 1})
+rotFwd.addEventListener("touchend", (e) => {rotMove = 0})
+latBack.addEventListener("touchstart", (e) => {latMove = -1})
+latBack.addEventListener("touchend", (e) => {latMove = 0})
+latFwd.addEventListener("touchstart", (e) => {latMove = 1})
+latFwd.addEventListener("touchend", (e) => {latMove = 0})
+lonBack.addEventListener("touchstart", (e) => {lonMove = -1})
+lonBack.addEventListener("touchend", (e) => {lonMove = 0})
+lonFwd.addEventListener("touchstart", (e) => {lonMove = 1})
+lonFwd.addEventListener("touchend", (e) => {lonMove = 0})
 
 // Rendering loop
 function render() {

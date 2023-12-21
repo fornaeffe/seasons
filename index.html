@@ -9,6 +9,7 @@
 			#viewer {height: 100vh; width: 100vh;}
 
 			.input-box { 
+				margin: auto;
 				display: grid;
 				grid-template-columns: auto;
 				grid-template-rows: auto;
@@ -17,7 +18,21 @@
 			}
 
 			.input-box>p { margin: 0; padding: 8px;}
-			.input-box>button { margin: 0; width: 48px; height: 48px;}
+			.input-box>button { 
+				background-color: #3b3b3b; 
+				color: rgb(255, 114, 114);
+				font-size: 2em;
+				margin: 0; 
+				border-radius: 16px;
+				width: 48px; 
+				height: 48px;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
 
 			@media (orientation: portrait) {
 				body { flex-direction: column;}

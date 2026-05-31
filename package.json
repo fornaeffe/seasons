@@ -1,5 +1,5 @@
 {
-  "name": "vr-playground",
+  "name": "seasons",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "@types/three": "^0.152.1",
     "ts-loader": "^9.4.4",
